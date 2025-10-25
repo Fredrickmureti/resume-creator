@@ -1,0 +1,7 @@
+project_id = "pfuqkzyjnkapkhfqmujv"
+
+[functions.send-resume-email]
+verify_jwt = false
+
+[functions.send-letter-cleanup-notification]
+verify_jwt = false

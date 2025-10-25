@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide everything except resume preview */
+  body > div:first-child > div:first-child > div:first-child {
+    display: none !important;
+  }
+
+  /* Hide editor panel in flex layout */
+  body > div:first-child > div:first-child > div:first-child > div:first-child {
+    display: none !important;
+  }
+
+  /* Only show the preview panel */
+  body > div:first-child > div:first-child > div:first-child > div:last-child {
+    display: block !important;
+    border: none !important;
+    overflow: visible !important;
+    max-width: 100% !important;
+  }
+
+  /* Alternative approach: Hide all non-preview content */
+  .bg-slate-50,
+  nav,
+  button,
+  header,
+  .sticky {
+    display: none !important;
+  }
+
+  /* Show only resume preview */
+  .bg-slate-100 {
+    background: white !important;
+    padding: 0 !important;
+  }
+
+  #resume-preview {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    background: white !important;
+  }
+
+  #resume-preview * {
+    visibility: visible !important;
+  }
+
+  #resume-preview > div {
+    box-shadow: none !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* Professional Template - Show both columns in print */
+  #resume-preview .grid {
+    display: grid !important;
+  }
+
+  #resume-preview .grid > div {
+    display: block !important;
+  }
+
+  .bg-gradient-to-r,
+  .bg-gradient-to-br,
+  .bg-blue-600,
+  .bg-blue-700,
+  .bg-orange-500,
+  .bg-red-500,
+  .bg-gray-800 {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

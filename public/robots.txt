@@ -1,0 +1,22 @@
+# Robots.txt for CreateResume.tech - Professional Resume Builder
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /private/
+Disallow: /dashboard/
+Disallow: /profile/
+
+# Allow specific resume-related pages for SEO
+Allow: /resume-templates/
+Allow: /cv-maker/
+Allow: /resume-builder/
+Allow: /cover-letter-generator/
+Allow: /features/
+
+# Sitemap location
+Sitemap: https://createresume.tech/sitemap.xml
+
+# Crawl delay for better server performance
+Crawl-delay: 1
